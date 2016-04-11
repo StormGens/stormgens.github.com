@@ -1,7 +1,9 @@
-﻿# # Activity启动模式-LaunchMode
 
-标签（空格分隔）： LaunchMode
-
+---
+layout: post
+title: "Activity启动模式-LaunchMode"
+tags: [LaunchMode]
+categories: [Android]
 ---
 ##四种启动模式
 ### Standard
@@ -9,12 +11,12 @@
 #####  1.Android 5.0 之前
 * 同一应用内
 	新生成的Activity，放入发送Intent者Task的栈顶。
-```
+{% highlight%}
 TaskRecord{537925a8 #42 A com.zlq.lmt U 0}
       Run #3: ActivityRecord{538314d0 com.zlq.lmt/.StandardActivity}
       Run #2: ActivityRecord{5385a7c4 com.zlq.lmt/.StandardActivity}
       Run #1: ActivityRecord{53760908 com.zlq.lmt/.MainActivity}
-```
+{% endhighlight %}
 * 跨应用启动
 	 新生成的Activity，放入发送Intent者Task的栈的栈顶（尽管他们属于不同的程序，还是会放入调用者程序的栈内）。
 ```
@@ -210,3 +212,4 @@ startActivityForResult 不同于 startActivity, 在使用 startActivityForResult
   [5]: http://droidyue.com/blog/2015/08/16/dive-into-android-activity-launchmode/index.html
   [6]: http://www.wangchenlong.org/2016/02/23/1603/234-activity-launch-mode/
   [7]: http://blog.csdn.net/zhangjg_blog/article/details/10923643
+
